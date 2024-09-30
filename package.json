@@ -1,0 +1,24 @@
+{
+    "name": "com.triple-a-studios.scene-manager",
+    "description": "An Additive Async Multi-Scene Loader",
+    "version": "1.0.0",
+    "displayName": "TripleA-Scene-Manager",
+    "unity": "2021.3",
+    "documentationUrl": "https://github.com/Triple-A-Studios/TripleA-Utils.git",
+    "changelogUrl": "https://github.com/Triple-A-Studios/TripleA-Utils.git",
+    "licenseUrl": "https://github.com/Triple-A-Studios/TripleA-Utils.git",
+    "dependencies": {
+        "com.eflatun.scenereference": "git+https://github.com/starikcetin/Eflatun.SceneReference.git#4.1.1"
+    },
+    "keywords": [
+        "Scenes",
+        "SceneManagement",
+        "SceneLoader",
+        "Async"
+    ],
+    "author": {
+        "name": "Triple-A-Studios",
+        "email": "ali.qadir.007@outlook.com",
+        "url": "https://github.com/Triple-A-Studios"
+    }
+}
