@@ -1,9 +1,7 @@
 {
-    "name": "com.TripleA.SceneManager",
-    "rootNamespace": "TripleA",
-    "references": [
-        "GUID:caca889fed6088d40b22c2d7e2909c31"
-    ],
+    "name": "com.TripleA.SceneManagerEditor",
+    "rootNamespace": "TripleA.SceneManager",
+    "references": ["GUID:1ec1061b2a67dee4d9ae9bdeaa7027e4"],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

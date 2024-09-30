@@ -4,9 +4,9 @@
     "version": "1.0.0",
     "displayName": "TripleA-Scene-Manager",
     "unity": "2021.3",
-    "documentationUrl": "https://github.com/Triple-A-Studios/TripleA-Utils.git",
-    "changelogUrl": "https://github.com/Triple-A-Studios/TripleA-Utils.git",
-    "licenseUrl": "https://github.com/Triple-A-Studios/TripleA-Utils.git",
+    "documentationUrl": "https://github.com/triple-a-studios/TripleA-SceneManager",
+    "changelogUrl": "https://github.com/triple-a-studios/TripleA-SceneManager",
+    "licenseUrl": "https://github.com/triple-a-studios/TripleA-SceneManager",
     "dependencies": {
         "com.eflatun.scenereference": "git+https://github.com/starikcetin/Eflatun.SceneReference.git#4.1.1"
     },
