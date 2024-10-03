@@ -8,7 +8,6 @@
     "changelogUrl": "https://github.com/triple-a-studios/TripleA-SceneManager",
     "licenseUrl": "https://github.com/triple-a-studios/TripleA-SceneManager",
     "dependencies": {
-        "com.eflatun.scenereference": "git+https://github.com/starikcetin/Eflatun.SceneReference.git#4.1.1",
         "com.unity.addressables" : "1.19.19"
     },
     "keywords": [

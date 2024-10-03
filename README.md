@@ -2,7 +2,16 @@
 An Additive Async Multi-Scene Loader for Unity.
 ___
 
+## Dependencies
+
+-   Addressables: Installed automatically. Find it in unity package manager under unity registry.
+-   [SceneReference](https://github.com/starikcetin/Eflatun.SceneReference): Requires manual installation from GitHub.
+Download the package version 4.1.1 from GitHub.
+---
+
 ## Installation
+Install the dependencies in your project.
+
 ### Method 1 (Recommended):
 Using Git Url:
 1. Copy the git URL.
