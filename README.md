@@ -13,7 +13,7 @@ Using Git Url:
 ### Method 2:
 By Unity Package:
 1. Download the .unitypackage file from the [Release Page](https://github.com/Triple-A-Studios/TripleA-Utils/releases 
-"Releases") or from the [itch page](https://aliqadir.itch.io/utils "Itch Link").
+"Releases").
 2. Import the package into your unity project.
 
 ### Method 3 (Not Recommended):
@@ -37,14 +37,15 @@ ___
 
 ## Issues
 
-No known issues as of 30 Sep 2024.
+No known issues as of 03 Oct 2024.
 
 ___
 
 ## Future updates
 
-Upcoming updates (as of 30 Sep 2024): 
-- Support for use of Addressables.
+Upcoming updates (as of 03 Oct 2024): 
+- Add a package for normal scene loading(no additive multi scene loading support).
+- Make higher versions compatible with latest versions of Addressable packages.
 
 ___
 

@@ -8,7 +8,8 @@
     "changelogUrl": "https://github.com/triple-a-studios/TripleA-SceneManager",
     "licenseUrl": "https://github.com/triple-a-studios/TripleA-SceneManager",
     "dependencies": {
-        "com.eflatun.scenereference": "git+https://github.com/starikcetin/Eflatun.SceneReference.git#4.1.1"
+        "com.eflatun.scenereference": "git+https://github.com/starikcetin/Eflatun.SceneReference.git#4.1.1",
+        "com.unity.addressables" : "1.19.19"
     },
     "keywords": [
         "Scenes",
@@ -20,5 +21,12 @@
         "name": "Triple-A-Studios",
         "email": "ali.qadir.007@outlook.com",
         "url": "https://github.com/Triple-A-Studios"
-    }
+    },
+    "samples": [
+        {
+            "displayName": "Async Multi-Scene Loader",
+            "description": "Contains example usage of the Async Multi-Scene Loader",
+            "path": "Samples/AsyncSceneLoader"
+        }
+    ]
 }

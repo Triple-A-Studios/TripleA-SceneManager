@@ -1,7 +1,10 @@
 using System;
+using System.Linq;
+using Eflatun.SceneReference;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using UnityEngine.AddressableAssets;
 
 namespace TripleA.SceneManagement
 {
@@ -23,6 +26,8 @@ namespace TripleA.SceneManagement
         public event Action OnSceneGroupLoaded = delegate { };
 
         private SceneGroup<T> m_activeSceneGroup;
+
+        private readonly AsyncOperationHandleGroup m_operationHandleGroup = new(10);
 
         /// <summary>
         ///     Loads all the scenes in a scene group.
@@ -54,16 +59,23 @@ namespace TripleA.SceneManagement
                 var sceneData = group.scenes[i];
                 if (!reloadDupScenes && loadedScenes.Contains(sceneData.SceneName)) continue;
 
-                var operation = SceneManager.LoadSceneAsync(sceneData.sceneReference.Path, LoadSceneMode.Additive);
-
-                operationGroup.operations.Add(operation);
+                if (sceneData.sceneReference.State == SceneReferenceState.Regular)
+                {
+                    var operation = SceneManager.LoadSceneAsync(sceneData.sceneReference.Path, LoadSceneMode.Additive);
+                    operationGroup.operations.Add(operation);
+                }
+                else if (sceneData.sceneReference.State == SceneReferenceState.Addressable)
+                {
+                    var operationHandle = Addressables.LoadSceneAsync(sceneData.sceneReference.Path, LoadSceneMode.Additive);
+                    m_operationHandleGroup.handles.Add(operationHandle);
+                }
 
                 OnSceneLoaded?.Invoke(sceneData.SceneName);
             }
 
-            while (!operationGroup.IsDone)
+            while (!operationGroup.IsDone || !m_operationHandleGroup.IsDone)
             {
-                progress?.Report(operationGroup.Progress);
+                progress?.Report((operationGroup.Progress + m_operationHandleGroup.Progress) * 0.5f);
                 await Task.Delay(100);
             }
 
@@ -97,6 +109,7 @@ namespace TripleA.SceneManagement
                 if (sceneName.Equals(activeScene)) continue;
 
                 if (doNotUnloadScenes != null && doNotUnloadScenes.Contains(sceneName)) continue;
+                if (m_operationHandleGroup.handles.Any(h => h.IsValid() && h.Result.Scene.name == sceneName)) continue;
 
                 scenes.Add(sceneName);
             }
@@ -112,6 +125,12 @@ namespace TripleA.SceneManagement
                 
                 OnSceneUnloaded?.Invoke(scene);
             }
+
+            foreach (var handle in m_operationHandleGroup.handles)
+            {
+                if (handle.IsValid()) Addressables.UnloadSceneAsync(handle);
+            }
+            m_operationHandleGroup.handles.Clear();
 
             while (!operationGroup.IsDone)
             {
