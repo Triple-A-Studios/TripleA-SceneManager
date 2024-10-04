@@ -1,7 +1,7 @@
 {
     "name": "com.triple-a-studios.scene-manager",
     "description": "An Additive Async Multi-Scene Loader",
-    "version": "1.0.0",
+    "version": "1.1.1",
     "displayName": "TripleA-Scene-Manager",
     "unity": "2021.3",
     "documentationUrl": "https://github.com/triple-a-studios/TripleA-SceneManager",

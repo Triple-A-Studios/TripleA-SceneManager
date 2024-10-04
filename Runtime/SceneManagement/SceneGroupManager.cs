@@ -36,7 +36,8 @@ namespace TripleA.SceneManagement
         /// <param name="progress">Progress callback.</param>
         /// <param name="activeSceneType">The type of the active scene in the group.</param>
         /// <param name="reloadDupScenes">If true, duplicate scenes will be reloaded.</param>
-        public virtual async Task LoadScenes(SceneGroup<T> group, IProgress<float> progress, T activeSceneType, bool reloadDupScenes = false)
+        /// <param name="artificialDelay">Artificial delay to add to the loading process.</param>
+        public virtual async Task LoadScenes(SceneGroup<T> group, IProgress<float> progress, T activeSceneType, bool reloadDupScenes = false, float artificialDelay = 0f)
         {
             m_activeSceneGroup = group;
 
@@ -63,11 +64,13 @@ namespace TripleA.SceneManagement
                 {
                     var operation = SceneManager.LoadSceneAsync(sceneData.sceneReference.Path, LoadSceneMode.Additive);
                     operationGroup.operations.Add(operation);
+                    await Task.Delay(TimeSpan.FromSeconds(artificialDelay));
                 }
                 else if (sceneData.sceneReference.State == SceneReferenceState.Addressable)
                 {
                     var operationHandle = Addressables.LoadSceneAsync(sceneData.sceneReference.Path, LoadSceneMode.Additive);
                     m_operationHandleGroup.handles.Add(operationHandle);
+                    await Task.Delay(TimeSpan.FromSeconds(artificialDelay));
                 }
 
                 OnSceneLoaded?.Invoke(sceneData.SceneName);

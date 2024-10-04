@@ -1,3 +1,7 @@
+## [1.1.1] - 2024-10-04
+### Addressable Support
+- Add support for artificial delay
+
 ## [1.1.0] - 2024-10-03
 ### Addressable Support
 - Add support for addressable scenes

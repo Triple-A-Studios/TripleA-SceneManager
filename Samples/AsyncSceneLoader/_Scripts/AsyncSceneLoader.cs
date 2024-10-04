@@ -60,7 +60,7 @@ namespace TripleA.Samples.AsyncSceneLoader
             
             EnableLoadingCanvas();
 
-            await m_sceneGroupManager.LoadScenes(m_sceneGroup[index], progress, MySceneTypes.ActiveScene);
+            await m_sceneGroupManager.LoadScenes(m_sceneGroup[index], progress, MySceneTypes.ActiveScene, false, 2f);
 
             EnableLoadingCanvas(false);
         }
