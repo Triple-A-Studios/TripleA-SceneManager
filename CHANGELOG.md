@@ -1,3 +1,8 @@
+## [1.1.2] - 2025-01-08
+### Samples Restructure
+- Renamed Samples Folder
+
+
 ## [1.1.1] - 2024-10-04
 ### Addressable Support
 - Add support for artificial delay
