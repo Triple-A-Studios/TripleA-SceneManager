@@ -2,7 +2,7 @@
 using System.Linq;
 using UnityEngine;
 
-namespace TripleA.SceneManagement
+namespace TripleA.SceneManagement.AdditiveSceneManagement
 {
 	public readonly struct AsyncOperationGroup {
 		public readonly List<AsyncOperation> operations;

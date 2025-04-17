@@ -1,12 +1,12 @@
 using System;
-using System.Linq;
-using Eflatun.SceneReference;
-using System.Threading.Tasks;
 using System.Collections.Generic;
-using UnityEngine.SceneManagement;
+using System.Linq;
+using System.Threading.Tasks;
+using Eflatun.SceneReference;
 using UnityEngine.AddressableAssets;
+using UnityEngine.SceneManagement;
 
-namespace TripleA.SceneManagement
+namespace TripleA.SceneManagement.AdditiveSceneManagement
 {
     public abstract class SceneGroupManager<T> where T : Enum
     {

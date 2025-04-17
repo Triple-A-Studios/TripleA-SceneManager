@@ -1,3 +1,7 @@
+## [1.1.3] - 2025-04-17
+### Changes
+- Namespace changed
+
 ## [1.1.2] - 2025-01-08
 ### Samples Restructure
 - Renamed Samples Folder

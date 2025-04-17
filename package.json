@@ -1,12 +1,12 @@
 {
     "name": "com.triple-a-studios.scene-manager",
     "description": "An Additive Async Multi-Scene Loader",
-    "version": "1.1.2",
-    "displayName": "TripleA-Scene-Manager",
+    "version": "1.1.3",
+    "displayName": "TripleA - Scene Manager",
     "unity": "2021.3",
     "documentationUrl": "https://github.com/triple-a-studios/TripleA-SceneManager",
-    "changelogUrl": "https://github.com/triple-a-studios/TripleA-SceneManager",
-    "licenseUrl": "https://github.com/triple-a-studios/TripleA-SceneManager",
+    "changelogUrl": "https://github.com/Triple-A-Studios/TripleA-SceneManager/blob/main/CHANGELOG.md",
+    "licenseUrl": "https://github.com/Triple-A-Studios/TripleA-SceneManager?tab=MIT-1-ov-file",
     "dependencies": {
         "com.unity.addressables" : "1.19.19"
     },

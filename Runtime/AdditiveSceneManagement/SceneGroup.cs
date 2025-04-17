@@ -1,9 +1,9 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using Eflatun.SceneReference;
-using System.Collections.Generic;
 
-namespace TripleA.SceneManagement
+namespace TripleA.SceneManagement.AdditiveSceneManagement
 {
     [Serializable]
     public abstract class SceneGroup<T> where T : Enum

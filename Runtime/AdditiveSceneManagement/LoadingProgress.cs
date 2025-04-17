@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TripleA.SceneManagement
+namespace TripleA.SceneManagement.AdditiveSceneManagement
 {
 	public class LoadingProgress : IProgress<float>
 	{
