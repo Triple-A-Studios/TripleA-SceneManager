@@ -19,9 +19,9 @@ Using Git Url:
 3. Click on the little "+" icon in the top left corner and from the dropdown, select "Add package from git URL".
 4. Paste the URL, click "Add" button.
 
-### Method 2:
+### Method 2 (not available for now):
 By Unity Package:
-1. Download the .unitypackage file from the [Release Page](https://github.com/Triple-A-Studios/TripleA-Utils/releases 
+1. Download the .unitypackage file from the [Release Page](https://github.com/Triple-A-Studios/ 
 "Releases").
 2. Import the package into your unity project.
 
